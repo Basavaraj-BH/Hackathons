@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing Number</title>
+</head>
+<body>
+    <script>
+        
+        function findMissingNumber(nums) {
+            const n = nums.length + 1;
+            const nu = (n * (n + 1)) / 2;
+
+            const sum = nums.reduce((acc, num) => acc + num, 0);
+
+            const missingNumber = nu - sum;
+            
+            return missingNumber;
+        }
+
+        const inputArray = [1, 2, 4, 5];
+        const missingNumber = findMissingNumber(inputArray);
+
+        console.log(`missingNumber =`, missingNumber);
+
+        document.write(`<h2>${missingNumber}</h2>`);
+    </script>
+</body>
+</html>
